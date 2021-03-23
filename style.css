@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: helvetica, sans-serif;
+	background-color: #eef5f7;
+/*	overflow: hidden;*/
+}
+
+.navbar{
+	display: flex;
+	align-items: center;
+	padding: 0rem 10rem;
+	background-color: white;
+	overflow: hidden;
+}
+
+.navbar .brand-title{
+	padding: 1rem 0;
+	margin: 0;
+	display: block;
+}
+
+
+/*NAVIGATION BUTTONS*/
+.navbar .nav-links{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+/*	background-color: blue;*/
+}
+/*NAVIGATION BUTTONS LEFT*/
+.navbar .nav-links .nav-links-left ul{ 
+	display: flex;
+	margin: 0;
+	padding: 0;
+/*	background-color: red;*/
+
+}
+
+.navbar .nav-links .nav-links-left ul li{
+	list-style-type: none;
+	text-align: center;
+
+}
+
+.navbar .nav-links .nav-links-left ul li:hover{
+	background-color: #425e76;
+	transition: 0.8s;
+}
+
+.navbar .nav-links .nav-links-left ul li a{
+	text-decoration: none;
+	padding:1.5rem;
+	color:black;
+	display: block;
+	width: 100%;
+}
+
+.navbar .nav-links .nav-links-left ul li a:hover{
+	color:white;
+}
+
+/*NAVIGATION BUTTONS RIGHT*/
+.navbar .nav-links .nav-links-right ul{ 
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar .nav-links .nav-links-right ul li{
+	list-style-type: none;
+	text-align: center;
+}
+
+.navbar .nav-links .nav-links-right ul li:hover{
+	background-color: #425e76;
+	transition: 0.8s;
+}
+
+.navbar .nav-links .nav-links-right ul li a{
+	text-decoration: none;
+	padding:1.5rem;
+	color:black;
+	display: block;
+}
+
+.navbar .nav-links .nav-links-right ul li a:hover{
+	color: white;
+}
+
+
+
+/*TOGGLE BUTTTON*/
+.navbar .toggle-button{
+    position: absolute;
+    top: 1.5rem;
+    right: 10rem;
+	display: none;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 30px;
+	height: 21px;
+/*	background-color: red;*/
+}
+
+.navbar .toggle-button .bar{
+	width:100%;
+	height: 3px;
+	background-color: #000000;
+	border-radius: 10px;
+}
+
+
+/*MOBILE VERSION*/
+@media screen and (max-width: 1075px){
+	.navbar .toggle-button{
+		display: flex;
+	}
+	.navbar .nav-links{
+		display: none;
+	}
+
+	.navbar{
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-around;
+		padding: 0rem 5rem;
+	}
+
+	.navbar .toggle-button{
+    position: absolute;
+    top: 1.5rem;
+    right: 5rem;
+
+	}
+
+	.navbar .nav-links{
+		flex-direction: column;
+/*		background-color: red;*/
+		width: 100%;
+	}
+	.navbar .nav-links ul {
+		flex-direction: column;
+	}
+
+    .nav-links.active {
+        display: flex;
+    }
+
+}
+
+
+/*BANNER SECTION*/
+
+.banner {
+	padding: 5em 10em;
+	background-image: url("./images/background banner-modified.jpg");
+	/*background-size:100%;*/
+	background-repeat: no-repeat;
+	background-position: center;
+	/*width: 100vw;*/
+	height: 80vh;
+
+}
+
+.banner h1{
+	font-size: 3rem;
+	margin: 0;
+	padding: 0;
+	color: white;
+
+}
+
+.banner .btn-banner{
+	padding: 0.75rem 3rem;
+	border: 2px solid white;
+	font-size: 0.75rem;
+	color: white;
+	background-color: transparent;
+	margin: 1%;
+}
+
+.banner .btn-banner:hover{
+	cursor: pointer;
+}
+
+@media screen and (max-width: 785px){
+	.banner{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.banner h1{
+		font-size: 2.5rem;
+	}
+	.banner .btn-banner{
+		width:40vw;
+	}
+}
+
+@media screen and (max-width: 610px){
+	.banner{
+		padding: 5rem;
+	}
+	.banner h1{
+		font-size: 2rem;
+	}
+	.banner .btn-banner{
+		width:80vw;
+		margin-top: 10%;
+	}
+}
+
+
+
+
+/*THREE SECTION LAYOUT*/
+.three-section-container{
+	width: 75vw;
+	background-color: white;
+	position: relative;
+	top: -15vh;
+	left: 10rem;
+	padding: 2rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	box-shadow: 0 1px 24px 0 rgb(117 128 134 / 23%);
+
+}
+
+.three-section-container .three-section-layout{
+	width:20vw;
+	line-height: 1.5rem;
+}
+
+.three-section-container .three-section-layout img{
+	width: 5vh;
+	height: 5vh;
+	margin-bottom: 5%;
+}
+
+.three-section-container .three-section-layout h5{
+	font-size: 0.85rem;
+	margin-bottom: 5%;
+}
+
+.three-section-container .three-section-layout p{
+	font-size: 0.85rem;
+}
+
+
+@media screen and (max-width: 1280px){
+	.three-section-container{
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+	}
+}
+
+@media screen and (max-width: 785px){
+	.three-section-container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+	.three-section-container .three-section-layout{
+		width: 80vw;
+		margin-bottom: 8%;
+	}
+}
+
+
+
+/*BRANDING LOGO SECTION*/
+
+.branding-logo-container{
+	background-color: white;
+	padding: 5rem 10rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.branding-logo-container .branding-logs{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	
+}
+
+.branding-logo-container .branding-logs img{
+	width:10rem;
+	padding: 1vh;
+}
+
+@media screen and (max-width: 960px){
+	.branding-logo-container .branding-logs{
+		flex-flow: row nowrap;
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 660px){
+	.branding-logo-container{
+		padding: 5rem 2rem;
+	}
+
+}
+
+/*INFORMATION SECTION*/
+.branding-logo-container .informations{
+	display: flex;
+	flex-direction: row;
+	margin-top: 8%;
+}
+
+.branding-logo-container .informations .image-sider{
+	width: 20vw;
+	height: 80vh;
+	margin-right: 5%;
+}
+
+.branding-logo-container .informations .image-sider img{
+	width: 20vw;
+	height: 80vh;
+
+}
+
+.branding-logo-container .informations .informations-text h3{
+	font-size: 1.5rem;
+	margin-bottom: 4%;
+}
+
+.branding-logo-container .informations .informations-text hr{
+	border: 1px solid black;
+	margin: 3% 0;
+}
+
+.branding-logo-container .informations .informations-text .rows{
+/*	width: 50vw;*/
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+/*	padding: 5% 0;*/
+	margin-bottom: 10%;
+}
+
+
+.branding-logo-container .informations .informations-text .rows .cols h5{
+	margin-bottom: 3%;
+	font-size: 1rem;
+}
+
+.branding-logo-container .informations .informations-text .rows .cols p{
+	font-size: 1rem;
+}
+
+@media screen and (max-width: 950px){
+	.branding-logo-container .informations .image-sider{
+		display: none;
+	}
+	.branding-logo-container .informations .informations-text .rows{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+}
+
+
+
+
+.branding-logo-container .informations .informations-text .btn-information a{
+	background-color: #3abeeb;
+	border:1px solid transparent;
+	padding: 1rem 1.5rem;
+	text-decoration: none;
+	color: white;
+	font-size: 1rem;
+}
+
+
+/*FEATURES SECTION*/
+.features-container{
+	background-color: #f9f6f3;
+	padding: 5% 10%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+.features-container .features{
+	display: flex;
+	flex-direction: column;
+	/*padding: 0rem 2rem;*/
+	width: 50vw;
+	/*background-color: blue;*/
+/*	height: 100vh;*/
+}
+
+.features-container .features img{
+	width: 6em;
+	padding: 0;
+	margin-bottom: 5%;
+}
+
+.features-container .features h3{
+	font-size: 1.5rem;
+	margin-bottom: 5%;
+}
+
+.features-container .features p{
+	font-size: 1rem;
+	margin-bottom: 3%;
+}
+
+.features-container .google-appstore{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+/*	background-color: blue;	*/
+}
+.features-container .google-appstore a{
+	margin-right: 3%;
+}
+
+.features-container .google-appstore a img{
+	width: 8em;
+	height: 3em;
+	
+}
+
+
+
+/*FEATURE RIGHT SECTION*/
+.features-container .features2-container{
+	padding: 0rem 0rem;
+	width: 50vw;
+	/*background-color: red;*/
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.features-container .features2-container .img1{
+	position: relative;
+	top: 0;
+	left: 0;
+
+}
+
+.features-container .features2-container .img1 img{
+	max-width: 60%;
+	height: auto;
+}
+
+.features-container .features2-container .img2{
+	position: absolute;
+	top: 50px;
+	right: 0px;
+}
+
+.features-container .features2-container .img2 img{
+	max-width: 100%;
+	height: auto;
+}
+
+.features-container .features2-container .img3{
+	position: absolute;
+	top: 253px;
+	right: 20px;
+
+}
+.features-container .features2-container .img3 img{
+	max-width: 100%;
+	height: auto;
+}
+
+
+.features-container .features2-container .testimonial{
+	position: relative;	
+	top: 0;
+	left: 0;
+	width: 45%;
+}
+
+.features-container .features2-container .testimonial img{
+	width: 2rem;
+	margin-bottom: 5%;
+}
+
+.features-container .features2-container .testimonial blockquote{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 25px;
+    color: #000000;
+    text-align: justify;
+}
+
+@media screen and (max-width: 1240px){
+	.features-container .features2-container .img1 img{
+	max-width: 100%;
+	height: auto;
+	}
+	.features-container .features2-container .img2{
+		position: static;
+	}
+	.features-container .features2-container .img3{
+		position: static;
+	}
+	.features-container .features2-container{
+		display: flex !important;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.features-container .features2-container .testimonial{
+		width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 960px){
+	.features-container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	/*TESTING CODE*/
+/*	.features-container .features{
+		width: 80vw;
+	}
+	.features-container .features2-container{
+		width: 80vw;
+	}
+	.features-container .features2-container .img1 img{
+		max-width: 100%;
+		height: auto;
+		background-color: red;
+	}
+	.features-container .features2-container .img2 img{
+		max-width: 100%;
+		height: auto;
+		background-color: blue;
+		float: left;
+	}
+	.features-container .features2-container .img3 img{
+		max-width: 100%;
+		height: auto;
+		background-color: green;
+	}*/
+}
+
+@media screen and (max-width: 500px){
+	.features-container {
+		padding: 0;
+		margin:0;
+	}
+	.features-container .features2-container{
+		display: flex;
+		flex-direction: row;
+	}
+	.features-container .features{
+		width: 80vw;
+	}
+	.features-container .features2-container{
+		width: 80vw;
+	}
+}
+
+
+
+/*FOOTER*/
+.footer{
+	background-color: #f9fafa;
+	padding: 1rem 10rem;
+}
+
+.footer .upper-footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer .upper-footer .branding-logo-footer{
+	padding: 1rem 0;
+	margin: 0;
+	display: block;
+}
+
+.footer .upper-footer .nav-links-footer ul{
+	display: flex;
+}
+
+.footer .upper-footer .nav-links-footer ul li{
+	list-style-type: none;
+}
+
+.footer .upper-footer .nav-links-footer ul li a{
+	text-decoration: none;
+	padding: 1rem;
+	color:black;
+}
+
+.footer .lower-footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer .lower-footer .social-media-icon{
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+	margin: 0;
+}
+
+.footer .lower-footer .social-media-icon a{
+	padding-right: 0.75rem;
+}
+
+.footer .lower-footer .social-media-icon a img{
+	width: 1.5rem;
+}
+
+.footer .lower-footer .google-appstore{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.footer .lower-footer .google-appstore a{
+	padding: 1rem;
+}
+
+.footer .lower-footer .google-appstore a img{
+	width: 8em;
+	height: 3em;
+	
+}
+
+
+.footer hr{
+	border: 1px solid black;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+.footer p{
+	color:#425b76;
+	font-size: 0.75rem;
+	margin-bottom: 2em;
+}
+
+
+@media screen and (max-width: 975px){
+	.footer{
+		width: 100%;
+		padding: 1rem 3rem;
+	}
+	.footer .upper-footer{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.footer .upper-footer .nav-links-footer ul{
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: flex-start;
+	}
+	.footer .upper-footer .nav-links-footer ul li {
+		padding: 1rem 0;
+	}
+
+	.footer .upper-footer .nav-links-footer ul li a{
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 700px){
+	.footer .lower-footer{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-top: 1rem;
+	}
+
+
+	.footer .lower-footer .google-appstore a {
+		padding:0;
+		margin-right: 1rem;
+		margin-top: 1rem;
+	}
+}
